@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/yjp0mkl.css">
+</head>
+
+<body>
+    <header>
+        <div class="headerParent">
+            <div class="div1">PARSONS</div>
+            <div class="div2">BFA</div>
+            <div class="div3">CD</div>
+            <div class="div4"><span>SCHOOL</span> <span>OF</span> <span>DESIGN</span></div>
+            <div class="div5">THESIS</div>
+
+
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><span class="round"></span>Canvas</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <!-- <h2>Welcome to our website!</h2> -->
+            <!-- <canvas id="myCanvas" width="400" height="400"></canvas> -->
+        </section>
+    </main>
+
+    <!-- canvas here -->
+    <div id="sidebar">
+        <div class="colorButtons">
+            <h3>Colour</h3>
+            <input type="color" id="colorpicker" value="black" class="colorpicker">
+        </div>
+        <div class="colorButtons">
+            <h3>Bg Color</h3>
+            <input type="color" value="#ffffff" id="bgcolorpicker" class="colorpicker">
+        </div>
+
+        <div class="toolsButtons">
+            <h3>Tools</h3>
+            <button id="eraser" class="btn btn-default"><span class="glyphicon glyphicon-erase"
+                    aria-hidden="true"></span></button>
+            <button id="clear" class="btn btn-danger"> <span class="glyphicon glyphicon-repeat"
+                    aria-hidden="true"></span></button>
+        </div>
+
+        <div class="buttonSize">
+            <h3>Size (<span id="showSize">20</span>)</h3>
+            <input type="range" min="1" max="80" value="20" step="1" id="controlSize">
+        </div>
+
+        <div class="canvasSize">
+            <h3>Canvas</h3>
+            <div class="input-group">
+                <span class="input-group-addon">X</span>
+                <input type="number" id="sizeX" class="form-control" placeholder="sizeX" value="1000" class="size">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon">Y</span>
+                <input type="number" id="sizeY" class="form-control" placeholder="sizeY" value="700" class="size">
+            </div>
+            <input type="button" class="updateSize btn btn-success" value="Update" id="canvasUpdate">
+        </div>
+        <!-- <div class="Storage">
+			<h3>Storage</h3>
+			<input type="button" value="Save" class="btn btn-warning" id="save">
+			<input type="button" value="Load" class="btn btn-warning" id="load">
+			<input type="button" value="Clear" class="btn btn-warning" id="clearCache">
+		</div> -->
+        <div class="extra">
+            <h3>Extra</h3>
+            <a id="saveToImage" class="btn btn-warning">Download</a>
+        </div>
+
+
+    </div>
+    <div class="sideInfo">
+        <div class="sideLeft">Parsons School of Design <br>
+            The New School
+        </div>
+        <div class="sideRight">2 W 13th Street <br>
+            63 5th Ave
+        </div>
+    </div>
+    <footer>
+        <p>&copy; Parsons School of Design. Communication Design 2023. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
