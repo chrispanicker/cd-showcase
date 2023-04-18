@@ -1,0 +1,52 @@
+@media screen and (max-width: 1020px) {
+
+  .items{
+    border: none;
+  }
+
+  .writtenTitle{
+    top: 30vh;
+  }
+
+  .dateTitle{
+    font-size: 3vh;
+    bottom: 2vh;
+  }
+
+  #guide h2{
+    font-size: 4vh;
+  }
+  #guide h3{
+    font-size: 3vh;
+  }
+
+  #guide div span{
+    font-size: 2vh;
+  }
+
+  #guide br{
+    display: inline;
+  }
+  #guide div span{
+    flex-direction: column;
+    padding-bottom: 1vh;
+  }
+
+  #about{
+    height: 50vh;
+  }
+
+  #about h3{
+    font-size: 4vh;
+    margin: 0vh 10vh 0 0;
+  }
+
+  #map h2{
+    font-size: 4vh;
+  }
+
+  footer{
+    display: none;
+  }
+
+}

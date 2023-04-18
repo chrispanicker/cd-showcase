@@ -1,217 +1,239 @@
 /* Reset some default styles */
-body,
-h1,
-h2,
-p {
+*{
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
-
 /* Basic styling */
 
-
-header {
-    /* background-color: #333; */
-    color: #fff;
-    padding: 10px;
+h3{
+    font-weight: unset;
 }
 
-.headerParent {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    color: black;
-    height: 4vh;
+.empty{
+    width: 100vw;
+    height: 100vh;
 }
 
-.div1 {
-    grid-area: 1 / 1 / 2 / 3;
-    font-family: "owners-xnarrow", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 2rem;
-    height: 1vh;
-    display: flex;
-    justify-content: space-between;
-
-}
-
-.div2 {
-    grid-area: 2 / 1 / 4 / 3;
-    font-family: "owners-xwide", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-
-    font-size: 5rem;
-}
-
-.div3 {
-    grid-area: 1 / 3 / 4 / 5;
-    font-family: "owners-narrow", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 8rem;
-    padding: 0;
-    /* display: flex;
-    justify-self: flex-start;
-    height:4vh; */
-    /* position: absolute;
-    top:0;
-    left:10; */
-
-
-}
-
-.div4 {
-    grid-area: 1 / 5 / 2 / 8;
-    font-family: "owners-xnarrow", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    text-align: right;
-    font-size: 2rem;
-    height: 1vh;
-    display: flex;
-    justify-content: space-between;
-}
-
-.div5 {
-    grid-area: 2 / 5 / 4 / 8;
-    font-family: "owners-xwide", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    text-align: right;
-    font-size: 5rem;
-}
-
-nav{
-    position: absolute;
-    bottom: 10px;
-}
-
-.round{
-    border-radius: 50px;
-    background-color: #000000;
-    width:10px;
-    height:10px;
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 10px;
-}
-
-nav ul li a {
-    color: #000000;
-    text-decoration: none;
-    font-family: "owners-wide", sans-serif;
+.paras{
+    font-family: "owners-text", sans-serif;
     font-weight: 400;
     font-style: normal;
+    letter-spacing: .02vh;
+}
+.titles{
+    font-family: "owners-xwide", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: justify;
+    line-height: 1;
+    width: 100%;
 }
 
-main {
-    padding: 20px;
+#zoomMe{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: zoom-out;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 10vh;
 }
 
-footer {
-    /* background-color: #333; */
-    position: absolute;
+#zoomMe img{
+    z-index: 100;
+    height: 100vh;
+
+}
+
+.hide{
+    display: none;
+}
+
+
+section{
+    padding: 2vh 0;
+
+}
+
+main{
+    z-index: 100;
+}
+
+button{
+    background: none;
+    color: white;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+footer{
+    z-index: 100;
+    height: 3vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    position: fixed;
     bottom: 0;
-    right: 0;
+    width: 100vw;
+}
+
+footer ul{
+    display: flex;
+}
+
+footer li{
+    padding: 1vh;
+}
+footer a{
+    color: white;
+}
+footer p{
+    color: white;
     font-size: 10px;
     font-family: "owners", sans-serif;
     font-weight: 400;
     font-style: normal;
-    letter-spacing: 10px;
+    letter-spacing: .1vw;
+    margin: 1vh;
+}
+
+nav a,
+nav button{
+    padding: 1vw;
 }
 
 
-.colorButtons {
-    display: block;
-    margin: 20px 0;
-}
-
-#canvas {
-    cursor: crosshair;
-    /* position: absolute;
-    top:0;
-    left:0; */
-}
-
-div#sidebar {
-    position: absolute;
-    left: 0;
-    top: 100px;
-    width: 150px;
-    /* padding: 20px 20px; */
-    padding-top: 30px;
-    padding-left: 10px;
-
-    font-family: "owners", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: small;
-}
-
-canvas#canvas {
-    right: 100px;
-    bottom: 100px;
-}
-
-.btn {
-    margin-bottom: 10px;
+/*HEADER STUFF*/
+header{
+    position: fixed;
+    top: 0;
     width: 100%;
+    z-index: 1;
 }
 
-input {
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.input-group {
-    margin-bottom: 10px;
-}
-
-.toolsButtons .btn {
-    width: 48%;
-}
-
-.sizeButtons .btn {
-    width: 48%;
-}
-
-.colorpicker {
-    background: transparent;
-    height: 40px;
+header h3{
+    padding: 0;
+    margin: 1vh;
 }
 
 
-.sideInfo {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    transform: rotate(-0.25turn);
-    position: absolute;
-    right: -21.8vw;
-    bottom: 43.3vh;
-    height: 6vh;
-    width: 71.5vh;
+.dateTitle{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 4vh;
+    font-size: 3vh;
+    line-height: 0;
+    padding: 0;
+    width: 98%;
+    margin: 2vh;
+}
+
+
+.programTitle{
+    font-size: 3vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.writtenTitle{
+    position: fixed;
+    top: -13vh;
+    left: -6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+
+.writtenTitle img{
+    width: 110vw;
+    height: auto;
+    z-index: -100;
+    transition: .3s filter ease;
+    filter: blur(0vh);
+
+}
+
+.writtenTitle img:hover{
+    filter: blur(4vh);
+}
+
+#cd{
+    cursor: pointer;
+}
+
+
+/*GUIDE STUFF*/
+#guide{
+    margin: 2vh 2vh;
+    height: 100vh;
+    width: 97vw;
+}
+
+#guide br{
+    display: none;
+}
+
+#guide h2{
+    font-size: 10vh;
+    padding-bottom: 1vh;
+    font-weight: bold;
+}
+
+
+
+#guide h3{
+    font-size: 5vh;
+    padding-bottom: 2vh;
+    z-index: 101;
+}
+
+#guide div{
+    padding: 2vh 0;
+}
+
+#guide div span{
+    display: flex;
+    justify-content: space-between;
+    font-size: 3vh;
+}
+
+.items{
+    border-bottom: dotted .3vh;
+    margin-bottom: .5vh;
+}
+
+
+/*ABOUT SECTION*/
+#about{
+    width: 100vw;
+    height: 40vh;
+    margin: 0 2vh 2vh 2vh;
+}
+
+#about h3{
+    font-size: 5vh;
+}
+
+#map{
+    margin: 2vh;
+}
+#map h2{
+    font-size: 10vh;
+    padding-bottom: 3vh;
+}
+
+#map img:first-of-type{
     z-index: 100;
-    padding: 10px;
-    background-color: black;
-    color: #fff;
-    font-family: "owners", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-
+    width: 100vw;
+    cursor: zoom-in;
 }
+
+
+

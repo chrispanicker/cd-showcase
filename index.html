@@ -3,97 +3,69 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Home Page</title>
+    <title>CD THESIS SHOWCASE 2023</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
     <link rel="stylesheet" href="https://use.typekit.net/yjp0mkl.css">
+    <link rel="stylesheet" href="https://use.typekit.net/yud2ssb.css">
+
 </head>
 
 <body>
     <header>
-        <div class="headerParent">
-            <div class="div1">PARSONS</div>
-            <div class="div2">BFA</div>
-            <div class="div3">CD</div>
-            <div class="div4"><span>SCHOOL</span> <span>OF</span> <span>DESIGN</span></div>
-            <div class="div5">THESIS</div>
-
-
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html"><span class="round"></span>Canvas</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
+        <div id="mainTitle" class="programTitle titles"><h3>BFA</h3> <h3 id="cd">CD</h3> <h3>THESIS</h3></div>
     </header>
+    <div class="dateTitle titles"><h3>APRIL 21</h3> <h3>2023</h3></div>
+
     <main>
-        <section>
-            <!-- <h2>Welcome to our website!</h2> -->
-            <!-- <canvas id="myCanvas" width="400" height="400"></canvas> -->
+        <section class="empty">
+            
         </section>
+        <div class="writtenTitle"><img src="./media/showcase.gif"></div>
+        <section id="about">
+            <h3 class="paras">The BFA Communication Design Thesis Showcase is a commemoration of the work produced by the Class of 2023 at Parsons School of Design. </h3>
+        </section>
+        <section class="titles" id="guide">
+            <h2>SCHEDULE</h2>
+            <div class="paras">
+                <h3>SESSION 1 (10AM-12PM)</h3>
+                <span class="items"><p>Section A : Caspar Lam</p><p>2 W 13th St, Room 1013</p></span>
+                <span class="items"><p>Section C : Andrew Leclair</p><p>63 Fifth Ave, Room 502</p></span>
+                <span class="items"><p>Section D : Ingrid Chou + Prin Limphongpand</p><p>66 Fifth Ave, Room 400</p></span>
+                <span class="items"><p>Section I : Elaine Lopez</p><p>63 Fifth Ave, Room 503</p></span>
+            </div>
+            <div class="paras">
+                <h3>SESSION 2 (12PM-2PM)</h3>
+                <span class="items"><p>Section B : Andrew Herzog</p><p>2 W 13th St, Room 1011</p></span>
+                <span class="items"><p>Section E : Allen Hori</p><p>63 Fifth Ave, Room 601</p></span>
+                <span class="items"><p>Section F : Thomas Griffiths</p><p>63 Fifth Ave, Room 620</p></span>
+                <span class="items"><p>Section G : Dinah Fried + Joe Marianek</p><p>2 W 13th St, Room 1006</p></span>
+                <span class="items"><p>Section H : Noah Venezia</p><p>63 Fifth Ave, Room 310</p></span>
+            </div>
+        </section>
+        <section id=map>
+            <h2 class="titles">MAP</h2>
+            <div id="mapImg"><img src="./media/map.svg"></div>
+            <div id="zoomMe" class="hide"><img class="zoom" src="./media/map.svg"></div>
+        </section>
+
+        
     </main>
 
-    <!-- canvas here -->
-    <div id="sidebar">
-        <div class="colorButtons">
-            <h3>Colour</h3>
-            <input type="color" id="colorpicker" value="black" class="colorpicker">
-        </div>
-        <div class="colorButtons">
-            <h3>Bg Color</h3>
-            <input type="color" value="#ffffff" id="bgcolorpicker" class="colorpicker">
-        </div>
-
-        <div class="toolsButtons">
-            <h3>Tools</h3>
-            <button id="eraser" class="btn btn-default"><span class="glyphicon glyphicon-erase"
-                    aria-hidden="true"></span></button>
-            <button id="clear" class="btn btn-danger"> <span class="glyphicon glyphicon-repeat"
-                    aria-hidden="true"></span></button>
-        </div>
-
-        <div class="buttonSize">
-            <h3>Size (<span id="showSize">20</span>)</h3>
-            <input type="range" min="1" max="80" value="20" step="1" id="controlSize">
-        </div>
-
-        <div class="canvasSize">
-            <h3>Canvas</h3>
-            <div class="input-group">
-                <span class="input-group-addon">X</span>
-                <input type="number" id="sizeX" class="form-control" placeholder="sizeX" value="1000" class="size">
-            </div>
-            <div class="input-group">
-                <span class="input-group-addon">Y</span>
-                <input type="number" id="sizeY" class="form-control" placeholder="sizeY" value="700" class="size">
-            </div>
-            <input type="button" class="updateSize btn btn-success" value="Update" id="canvasUpdate">
-        </div>
-        <!-- <div class="Storage">
-			<h3>Storage</h3>
-			<input type="button" value="Save" class="btn btn-warning" id="save">
-			<input type="button" value="Load" class="btn btn-warning" id="load">
-			<input type="button" value="Clear" class="btn btn-warning" id="clearCache">
-		</div> -->
-        <div class="extra">
-            <h3>Extra</h3>
-            <a id="saveToImage" class="btn btn-warning">Download</a>
-        </div>
 
 
-    </div>
-    <div class="sideInfo">
-        <div class="sideLeft">Parsons School of Design <br>
-            The New School
-        </div>
-        <div class="sideRight">2 W 13th Street <br>
-            63 5th Ave
-        </div>
-    </div>
     <footer>
+        <nav class="paras">
+            <button id="aboutButton">About</button>
+            <button id="schedButton">Schedule</button>
+            <button id="mapButton">Map</button>
+        </nav>
         <p>&copy; Parsons School of Design. Communication Design 2023. All rights reserved.</p>
     </footer>
-    <script src="script.js"></script>
+    <!-- <script src="draw.js"></script> -->
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="scroll.js"></script>
+    <script type="text/javascript" src="zoom.js"></script>
 </body>
 
 </html>
