@@ -13,18 +13,45 @@
 
 <body>
     <header>
-        <div id="mainTitle" class="programTitle titles"><h3>BFA</h3> <h3 id="cd">CD</h3> <h3>THESIS</h3></div>
+        <a href="index.html"><div id="mainTitle" class="programTitle titles"><h3>BFA</h3> <h3 id="cd">CD</h3> <h3>THESIS</h3></div></a>
     </header>
     <div class="dateTitle titles"><h3>APRIL 21</h3> <h3>2023</h3></div>
 
     <main>
-        <section class="empty">
-            
-        </section>
         <div class="writtenTitle"><img src="./media/showcase.gif"></div>
+        
+        <section id="drawCanvas" class="hide">
+        </section>
+
+        <section class='paras hide' id="draw">
+            <div id="sidebar">
+                <h2 class="titles">DRAW</h2>
+                <div class="buttonSize">
+                    <h3>Size (<span id="showSize">20</span>)</h3>
+                    <input type="range" min="1" max="80" value="20" step="1" id="controlSize">
+                </div>
+    
+                <div class="canvasSize">
+                    <input type="button" class="updateSize btn btn-success" value="Clear Canvas" id="canvasUpdate">
+                </div>
+    
+                <div class="extra">
+                    <input type="button" id="saveToImage" class="updateSize btn btn-success" value="Add To Background">
+                </div>
+    
+                <div class="close">
+                    <input type="button" id="closeDraw" class="updateSize btn btn-success" value="Close">
+                </div>
+            </div>
+        </section>
+
+        <section class="empty">
+        </section>
+
         <section id="about">
             <h3 class="paras">The BFA Communication Design Thesis Showcase is a commemoration of the work produced by the Class of 2023 at Parsons School of Design. </h3>
         </section>
+
         <section class="titles" id="guide">
             <h2>SCHEDULE</h2>
             <div class="paras">
@@ -43,6 +70,7 @@
                 <span class="items"><p>Section H : Noah Venezia</p><p>63 Fifth Ave, Room 310</p></span>
             </div>
         </section>
+
         <section id=map>
             <h2 class="titles">MAP</h2>
             <div id="mapImg"><img src="./media/map.svg"></div>
@@ -51,7 +79,14 @@
 
         
     </main>
-
+    
+    <h3 id="menuButton">☰</h3>
+    <div class="titles mobileUnhide mobileHide" id="mobileMenu">
+        <button class="titles" id="aboutButton">About</button>
+        <button class="titles" id="schedButton">Schedule</button>
+        <button class="titles" id="mapButton">Map</button>
+        <button class="titles" id="drawButton">Draw</button>
+    </div>
 
 
     <footer>
@@ -59,13 +94,17 @@
             <button id="aboutButton">About</button>
             <button id="schedButton">Schedule</button>
             <button id="mapButton">Map</button>
+            <button id="drawButton">Draw</button>
         </nav>
         <p>&copy; Parsons School of Design. Communication Design 2023. All rights reserved.</p>
     </footer>
     <!-- <script src="draw.js"></script> -->
     <script type="text/javascript" src="main.js"></script>
+    <script type="module" src="draw.js"></script>
     <script type="text/javascript" src="scroll.js"></script>
     <script type="text/javascript" src="zoom.js"></script>
+    <script type="module" src="bkg.js"></script>
+    <script type="module" src="menu.js"></script>
 </body>
 
 </html>

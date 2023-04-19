@@ -5,7 +5,13 @@
     scroll-behavior: smooth;
 }
 /* Basic styling */
-
+body{
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    color: unset;
+}
 h3{
     font-weight: unset;
 }
@@ -15,42 +21,22 @@ h3{
     height: 100vh;
 }
 
-.paras{
-    font-family: "owners-text", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: .02vh;
-}
-.titles{
-    font-family: "owners-xwide", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    text-align: justify;
-    line-height: 1;
-    width: 100%;
-}
-
-#zoomMe{
-    background-color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    cursor: zoom-out;
-    height: 100vh;
-    width: 100vw;
-    padding-top: 10vh;
-}
-
-#zoomMe img{
-    z-index: 100;
-    height: 100vh;
-
-}
 
 .hide{
     display: none;
 }
 
+.show{
+    display: flex;
+}
+
+.noScroll{
+    overflow: hidden;
+}
+
+.mobileUnhide{
+    display: none;
+}
 
 section{
     padding: 2vh 0;
@@ -61,7 +47,7 @@ main{
     z-index: 100;
 }
 
-button{
+footer button{
     background: none;
     color: white;
     border: none;
@@ -81,16 +67,7 @@ footer{
     width: 100vw;
 }
 
-footer ul{
-    display: flex;
-}
 
-footer li{
-    padding: 1vh;
-}
-footer a{
-    color: white;
-}
 footer p{
     color: white;
     font-size: 10px;
@@ -106,6 +83,21 @@ nav button{
     padding: 1vw;
 }
 
+/*FONT STYLING*/
+.paras{
+    font-family: "owners-text", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: .02vh;
+}
+.titles{
+    font-family: "owners-xwide", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: justify;
+    line-height: 1;
+    width: 100%;
+}
 
 /*HEADER STUFF*/
 header{
@@ -125,12 +117,14 @@ header h3{
     display: flex;
     justify-content: space-between;
     position: fixed;
-    bottom: 4vh;
+    bottom: 5vh;
     font-size: 3vh;
     line-height: 0;
     padding: 0;
-    width: 98%;
-    margin: 2vh;
+    width: 98vw;
+    margin-left: 1vh;
+    z-index: 100;
+/*    margin: 4vh;*/
 }
 
 
@@ -142,8 +136,8 @@ header h3{
 
 .writtenTitle{
     position: fixed;
-    top: -13vh;
-    left: -6vw;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -152,7 +146,7 @@ header h3{
 
 
 .writtenTitle img{
-    width: 110vw;
+    width: 90vw;
     height: auto;
     z-index: -100;
     transition: .3s filter ease;
@@ -221,6 +215,8 @@ header h3{
     font-size: 5vh;
 }
 
+/*MAP SECTION*/
+
 #map{
     margin: 2vh;
 }
@@ -235,5 +231,82 @@ header h3{
     cursor: zoom-in;
 }
 
+#zoomMe{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: zoom-out;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 10vh;
+}
+
+#zoomMe img{
+    z-index: 100;
+    height: 100vh;
+
+}
+
+/*DRAW SECTION*/
+
+#drawCanvas{
+    cursor: crosshair;
+    position: absolute;
+    top: 0;
+/*    display: flex;*/
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, .7);
+}
+
+#drawCanvas h3{
+    font-size: 4vh;
+}
+
+.drawShow{
+    display: flex;
+}
+
+
+#draw{
+    pointer-events: none;
+    margin: 2vh;
+    position: absolute;
+    top: 2vh;
+    z-index: 100;
+}
+
+#draw h2{
+    font-size: 10vh;
+    pointer-events: none;
+}
+
+#draw h3{
+    font-size: 3vh;
+    pointer-events: none;
+}
+
+#draw div{
+    margin-bottom: 2vh;
+}
+
+#draw input{
+    pointer-events: visible;
+    font-size: 2vh;
+    background: none;
+    text-decoration: underline;
+    border: none;
+    cursor: pointer;
+}
+
+#sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: space-between;
+}
 
 

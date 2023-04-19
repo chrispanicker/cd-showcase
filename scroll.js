@@ -1,25 +1,34 @@
 let sched = document.querySelector("#guide");
-let schedButton = document.querySelector("#schedButton")
+let schedButtons = document.querySelectorAll("#schedButton")
 
 let about = document.querySelector("#about");
-let aboutButton = document.querySelector("#aboutButton")
+let aboutButtons = document.querySelectorAll("#aboutButton")
 
 let map = document.querySelector("#map");
-let mapButton = document.querySelector("#mapButton")
+let mapButtons = document.querySelectorAll("#mapButton")
 
-let body = document.querySelector("body");
+let menu = document.querySelector("#mobileMenu")
+let drawCanvas = document.querySelector("#drawCanvas")
 
-schedButton.addEventListener("click", ()=>{
-	sched.scrollIntoView();
-})
+for(let i=0; i<schedButton.length; i++){
+	schedButtons[i].addEventListener("click", ()=>{
+		sched.scrollIntoView();
+		menu.classList.toggle("mobileHide");
+		
+	})
+	
+	aboutButtons[i].addEventListener("click", ()=>{
+		about.scrollIntoView();
+		menu.classList.toggle("mobileHide");
+	})
+	
+	mapButtons[i].addEventListener("click", ()=>{
+		map.scrollIntoView();
+		menu.classList.toggle("mobileHide");
+	})
+}
 
-aboutButton.addEventListener("click", ()=>{
-	about.scrollIntoView();
-})
 
-mapButton.addEventListener("click", ()=>{
-	map.scrollIntoView();
-})
 
 document.addEventListener("scroll", (e)=>{
 	let scroll = window.scrollY;
@@ -27,5 +36,4 @@ document.addEventListener("scroll", (e)=>{
 	if(scroll/500 <5){
 		img.style.filter = `blur(${scroll/500}vh)`;
 	}
-
 })
