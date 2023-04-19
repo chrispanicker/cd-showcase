@@ -47,6 +47,10 @@
         draw.classList.toggle("hide");
     });
 
+    document.getElementById('saveToImage').addEventListener('click', function() {
+        setTimeout(()=>{createCanvas();},100);
+}, false);
+
     // REDRAW 
 
     function redraw() {

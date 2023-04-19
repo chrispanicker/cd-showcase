@@ -8,8 +8,9 @@ for(let i=1; i<6; i++){
 
 let j=1;
 setInterval(()=>{
-	if(j<=imgArray.length-1){
+	if(j<imgArray.length){
 		bkgImage.src=imgArray[j];
+		console.log(imgArray[j])
 		j++;
 	}else{
 		j=1;
