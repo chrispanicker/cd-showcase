@@ -251,6 +251,7 @@ header h3{
 /*DRAW SECTION*/
 
 #drawCanvas{
+    touch-action: none;
     cursor: crosshair;
     position: absolute;
     top: 0;

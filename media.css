@@ -55,7 +55,7 @@
   #draw{
     top: 8vh;
   }
-  
+
   #draw h2{
     font-size: 4vh;
   }
@@ -94,14 +94,17 @@
   }
 
   #about{
-    height: 50vh;
+    height: 80vh;
   }
 
   #about h3{
     font-size: 4vh;
-    margin: 0vh 10vh 0 0;
+    margin: 0 10vh 0 0;
   }
 
+  #map{
+    height: 60vh;
+  }
   #map h2{
     font-size: 4vh;
   }

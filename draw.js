@@ -1,6 +1,7 @@
 	// SETTING ALL VARIABLES
 
     var isMouseDown=false;
+    var isFingerDown=false;
     var canvas = document.createElement('canvas');
     var body = document.getElementsByTagName("body")[0];
     var ctx = canvas.getContext('2d');
@@ -26,10 +27,7 @@
     
             let menu = document.querySelector("#mobileMenu")
             menu.classList.toggle("mobileHide");
-    
-            setTimeout(()=>{
-                body.classList.toggle("noScroll");
-            }, 500)
+
         });        
     }
 
@@ -46,7 +44,6 @@
     document.getElementById('closeDraw').addEventListener('click', function() {
         drawCanvas.classList.toggle("hide");
         drawCanvas.classList.toggle("drawShow");
-        body.classList.toggle("noScroll");
         draw.classList.toggle("hide");
     });
 
@@ -67,8 +64,8 @@
 
     canvas.addEventListener('mousedown', function() {mousedown(canvas, event);});
     canvas.addEventListener('mousemove',function() {mousemove(canvas, event);});
-    canvas.addEventListener('touchstart', function() {mousedown(canvas, event);});
-    canvas.addEventListener('touchmove',function() {mousemove(canvas, event);});
+    canvas.addEventListener('touchstart', function(e) {e.preventDefault(); e.stopPropagation(); touchStart(canvas, event);});
+    canvas.addEventListener('touchmove',function(e) {e.preventDefault(); e.stopPropagation(); touchMove(canvas, event);});
     canvas.addEventListener('mouseup',mouseup);
 
     // CREATE CANVAS
@@ -148,6 +145,14 @@
         };
     }
 
+    function getTouchPos(canvas, evt) {
+        var rect = canvas.getBoundingClientRect();
+        return {
+            x: evt.touches[0].clientX - rect.left,
+            y: evt.touches[0].clientY - rect.top
+        };
+    }
+
     // ON MOUSE DOWN
 
     function mousedown(canvas, evt) {
@@ -158,7 +163,16 @@
         ctx.beginPath();
         ctx.lineWidth  = currentSize;
         ctx.lineCap = "round";
+    }
 
+    function touchStart(canvas, evt) {
+        var touchPos = getTouchPos(canvas, evt);
+        isFingerDown=true
+        var currentPosition = getTouchPos(canvas, evt);
+        ctx.moveTo(currentPosition.x, currentPosition.y)
+        ctx.beginPath();
+        ctx.lineWidth  = currentSize;
+        ctx.lineCap = "round";
     }
 
     // ON MOUSE MOVE
@@ -166,6 +180,15 @@
     function mousemove(canvas, evt) {
         var currentPosition = getMousePos(canvas, evt);
         if(isMouseDown){
+            ctx.lineTo(currentPosition.x, currentPosition.y)
+            ctx.stroke();
+            store(currentPosition.x, currentPosition.y, currentSize, currentColor);
+        }
+    }
+
+    function touchMove(canvas, evt) {
+        var currentPosition = getTouchPos(canvas, evt);
+        if(isFingerDown){
             ctx.lineTo(currentPosition.x, currentPosition.y)
             ctx.stroke();
             store(currentPosition.x, currentPosition.y, currentSize, currentColor);
