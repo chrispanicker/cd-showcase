@@ -1,0 +1,116 @@
+@media screen and (max-width: 1020px) {
+  .empty{
+    height: 110vh;
+  }
+  .mobileUnhide{
+    display: flex;
+  }
+
+  .mobileHide{
+    display: none;
+  }
+
+  #mobileMenu{
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    position: fixed;
+    top: 0vh;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 5vh;
+    z-index: 101;
+    background-color: white;
+  }
+
+  #mobileMenu button{
+    padding: 4vh;
+    font-size: 3vh;
+    border: none;
+    text-decoration: underline;
+    background: none;
+  }
+
+  #menuButton{
+    font-size: 7vh;
+    position: fixed;
+    top: 4vh;
+    right: 2vh;
+    z-index: 105;
+  }
+
+  .programTitle{
+    top: 10vh;
+  }
+
+  .items{
+    border: none;
+  }
+
+  canvas{
+    border: black .2vh solid;
+  }
+
+  #draw{
+    top: 8vh;
+  }
+
+  #draw h2{
+    font-size: 4vh;
+  }
+
+  #draw h3{
+    font-size: 2vh;
+  }
+
+  #draw .buttonSize input{
+    width: 90vw;
+  }
+
+  .dateTitle{
+    font-size: 3vh;
+    bottom: 2vh;
+    width: 97%;
+  }
+
+  #guide h2{
+    font-size: 4vh;
+  }
+  #guide h3{
+    font-size: 3vh;
+  }
+
+  #guide div span{
+    font-size: 2vh;
+  }
+
+  #guide br{
+    display: inline;
+  }
+  #guide div span{
+    flex-direction: column;
+    padding-bottom: 1vh;
+  }
+
+  #about{
+    height: 80vh;
+  }
+
+  #about h3{
+    font-size: 4vh;
+    margin: 0 10vh 0 0;
+  }
+
+  #map{
+    height: 60vh;
+  }
+  #map h2{
+    font-size: 4vh;
+  }
+
+  footer{
+    display: none;
+  }
+
+}
