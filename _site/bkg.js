@@ -10,7 +10,6 @@ let j=1;
 setInterval(()=>{
 	if(j<imgArray.length){
 		bkgImage.src=imgArray[j];
-		console.log(imgArray[j])
 		j++;
 	}else{
 		j=1;

@@ -44,8 +44,13 @@ section{
 }
 
 main{
+/*    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;*/
+    width: 100%;
     z-index: 100;
-    margin: 2vh;
+/*    margin: 2vh;*/
 }
 
 footer button{
@@ -235,7 +240,10 @@ e{
 
 #map{
     margin: 2vh;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -253,12 +261,15 @@ e{
 #zoomMe{
     background-color: white;
     position: fixed;
+
+    justify-content: center;
+    align-items: center;
     top: 0;
     left: 0;
     cursor: zoom-out;
     height: 100vh;
     width: 100vw;
-    padding-top: 10vh;
+/*    display: flex;*/
 }
 
 #zoomMe img{
