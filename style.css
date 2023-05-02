@@ -40,24 +40,17 @@ h3{
 
 section{
     padding: 2vh 0;
-
 }
 
 main{
-/*    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;*/
     width: 100%;
     z-index: 100;
-/*    margin: 2vh;*/
 }
 
 footer button{
     background: none;
     color: white;
     border: none;
-/*    text-decoration: underline;*/
     cursor: pointer;
 }
 
@@ -134,11 +127,11 @@ header h3{
     display: flex;
     justify-content: space-between;
     position: fixed;
-    bottom: 8vh;
-    font-size: 3vh;
+    bottom: 9vh;
+    font-size: 4vh;
     line-height: 0;
     padding: 0;
-    width: 98vw;
+    width: 99vw;
     margin-left: 1vh;
     z-index: 100;
 /*    margin: 4vh;*/
@@ -146,7 +139,7 @@ header h3{
 
 
 .programTitle{
-    font-size: 3vh;
+    font-size: 4vh;
     display: flex;
     justify-content: space-between;
 }
@@ -154,7 +147,7 @@ header h3{
 .writtenTitle{
     position: fixed;
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -182,9 +175,8 @@ header h3{
 
 /*GUIDE STUFF*/
 #guide{
-    margin: 2vh 2vh;
     height: 100vh;
-    width: 97vw;
+    width: 100vw;
 }
 
 #guide br{
@@ -192,6 +184,7 @@ header h3{
 }
 
 #guide h2{
+    margin: 0 10vh 2vh 10vh;
     font-size: 10vh;
     padding-bottom: 1vh;
     font-weight: bold;
@@ -200,6 +193,7 @@ header h3{
 
 
 #guide h3{
+/*    margin: 0 10vh 2vh 10vh;*/
     font-size: 5vh;
     padding-bottom: 2vh;
     z-index: 101;
@@ -207,6 +201,7 @@ header h3{
 
 #guide div{
     padding: 2vh 0;
+    margin: 0 10vh 2vh 10vh;
 }
 
 #guide div span{
@@ -229,32 +224,35 @@ e{
 #about{
     width: 100vw;
     height: 40vh;
-    margin: 0 2vh 2vh 2vh;
+    
 }
 
 #about h3{
     font-size: 5vh;
+    margin: 0 10vh 2vh 10vh;
 }
 
 /*MAP SECTION*/
-
 #map{
-    margin: 2vh;
+    margin: 0 10vh 2vh 10vh;
     width: 100vw;
     height: 100vh;
-    display: flex;
+/*    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center;*/
+
 }
+
 #map h2{
     font-size: 10vh;
-    padding-bottom: 3vh;
+    padding-bottom: 15vh;
+/*    margin: 0 10vh 2vh 10vh;*/
 }
 
 #map img:first-of-type{
     z-index: 100;
-    width: 90vw;
+    width: 80vw;
     cursor: zoom-in;
 }
 
@@ -285,7 +283,6 @@ e{
     cursor: crosshair;
     position: absolute;
     top: 0;
-/*    display: flex;*/
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -328,7 +325,6 @@ e{
     pointer-events: visible;
     font-size: 2vh;
     background: none;
-/*    text-decoration: underline;*/
     border: none;
     cursor: pointer;
 }
