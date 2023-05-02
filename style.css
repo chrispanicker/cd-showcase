@@ -56,7 +56,7 @@ footer button{
 
 footer{
     z-index: 100;
-    height: 6vh;
+    height: 8vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -78,13 +78,14 @@ footer p{
 }
 
 nav{
+    margin: 1vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 nav button{
-    font-size: 2vh;
+    font-size: 2.4vh;
 }
 
 nav a,
@@ -127,14 +128,14 @@ header h3{
     display: flex;
     justify-content: space-between;
     position: fixed;
-    bottom: 9vh;
+    bottom: 11vh;
     font-size: 4vh;
     line-height: 0;
     padding: 0;
-    width: 99vw;
-    margin-left: 1vh;
+    width: 98.5vw;
+/*    margin-left: 1vh;*/
     z-index: 100;
-/*    margin: 4vh;*/
+    margin: 0 0 0 1vh;
 }
 
 
