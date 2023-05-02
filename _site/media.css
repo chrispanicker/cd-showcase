@@ -78,12 +78,15 @@
 
   .programTitle{
     font-size: 3vh;
+    width: 98%;
+    margin: 0 0 0 1vh;
   }
 
   .dateTitle{
     font-size: 3vh;
     bottom: 2vh;
-    width: 97%;
+    width: 96%;
+    margin: 0 0 0 1vh;
   }
 
   #guide h2{

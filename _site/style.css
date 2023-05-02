@@ -49,6 +49,8 @@ main{
 
 footer button{
     background: none;
+    font-family: owners-xwide;
+    font-weight: 700;
     color: white;
     border: none;
     cursor: pointer;
@@ -132,14 +134,16 @@ header h3{
     font-size: 4vh;
     line-height: 0;
     padding: 0;
-    width: 98.5vw;
+    width: 97.5vw;
 /*    margin-left: 1vh;*/
     z-index: 100;
-    margin: 0 0 0 1vh;
+    margin: 0 0 0 2vh;
 }
 
 
 .programTitle{
+    margin: 0 2vh 0 2vh;
+    width: 98vw;
     font-size: 4vh;
     display: flex;
     justify-content: space-between;
